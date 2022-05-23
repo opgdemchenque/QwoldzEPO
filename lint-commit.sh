@@ -24,7 +24,6 @@ while read -r line; do
 
   # ignore comment lines
   [[ "$line" =~ ^#.* ]] && continue
-  # ignore overlong 'fixup!' commit descriptions
   [[ "$line" =~ ^fixup!\ .* ]] && continue
 
   ((line_number += 1))
